@@ -1,0 +1,23 @@
+<nz-table #customerTable [nzLoading]="isDataLoading" [nzData]="customerList" [nzFrontPagination]="false"
+          (nzQueryParams)="onQueryParamsChange($event)" [nzTotal]="customersCount" [nzPageSize]="30">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Country Code</th>
+        <th nzColumnKey="countryCode" [nzFilters]="countries" [nzFilterFn]="true" [nzFilterMultiple]="false">Country</th>
+        <th>Phone</th>
+        <th nzColumnKey="state" [nzFilters]="states" [nzFilterFn]="true" [nzFilterMultiple]="false">State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of customerTable.data">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.countryCode}}</td>
+        <td>{{data.country}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.isValid ? 'Valid' : 'Invalid'}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
