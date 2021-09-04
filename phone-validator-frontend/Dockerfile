@@ -7,3 +7,4 @@ RUN npm run build
 
 FROM nginx
 COPY --from=buildProject /app/dist/phone-validator-frontend /usr/share/nginx/html
+COPY /nginx.conf /etc/nginx/conf.d/default.conf
