@@ -10,6 +10,13 @@ A small project to list some customers phone numbers and validate it, SQLite pra
 - Backend is using port `8080`.
 - No environment variables required to run the application, default one is used `application.properties`. 
 
+# Warnigns
+- Backend application is tightly coupled with DB in the `phone-validator/sample.db` file removal will cause application error, replace with same file name.
+
+# Extra Info
+- Application is using both server side pagination and server side filtering (searching) 
+- Using custom `SQLiteDialct` open source to integrate spring boot with SQLite for easy data read and write.
+- Using `Drivermanager` to get a connection and adding implementation for `regexp` functionality to search data. 
 
 # Project directory sturcture 
 - **phone-validator-frontend** : Contains the angular project files
