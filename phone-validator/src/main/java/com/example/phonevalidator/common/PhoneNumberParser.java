@@ -1,5 +1,7 @@
 package com.example.phonevalidator.common;
 
+import lombok.NonNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +10,7 @@ public class PhoneNumberParser {
     public static final String NUMBER_KEY = "number";
 
     // We assume that phone number is required, it's guaranteed to be not null.
-    public static Map<String, String> parsePhoneNumber(String phoneNumber) {
+    public static Map<String, String> parsePhoneNumber(@NonNull String phoneNumber) {
         Map<String, String> parsedData = new HashMap<>();
         String[] parsedNumber = phoneNumber.split(" ");
         String countryCode = "+" + parsedNumber[0].replace("(", "").replace(")", "");

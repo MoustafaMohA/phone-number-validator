@@ -29,7 +29,7 @@ public class CustomerService {
         this.sqlUtility = sqlUtility;
     }
 
-    public List<CustomerDTO> getPageOfCustomers(Pageable pageable) {
+    public List<CustomerDTO> getCustomerPage(Pageable pageable) {
         Page<Customer> customerPage = customerRepository.findAll(pageable);
         List<Customer> customers = customerPage.getContent();
         return getCustomerDTOS(customers);

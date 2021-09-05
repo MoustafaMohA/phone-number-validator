@@ -4,11 +4,9 @@ import com.example.phonevalidator.common.Dictionary;
 import com.example.phonevalidator.common.PhoneNumberParser;
 import com.example.phonevalidator.common.PhoneNumberValidator;
 import com.example.phonevalidator.entity.Customer;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 import lombok.With;
-import lombok.extern.jackson.Jacksonized;
 
 import java.util.Map;
 

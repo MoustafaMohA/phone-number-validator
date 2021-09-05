@@ -3,7 +3,8 @@ package com.example.phonevalidator.common;
 import java.util.Map;
 
 /**
- * The class acts as in memory database, it could be a SQL table or a configuration JSON file that contains all data needed,
+ * The class acts as in memory database (helper to make it easy validate customer phone numbers),
+ * it could be a SQL table or a configuration JSON file that contains all data needed,
  * If we need to add new country this is the only file to modified, also if we need for whatever reason to changes validation
  * regex this is the only file to be modified.
  */

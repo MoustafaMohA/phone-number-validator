@@ -21,8 +21,8 @@ public class CustomerController {
     }
 
     @GetMapping
-    List<CustomerDTO> getPageOfCustomers(Pageable pageable) {
-        return customerService.getPageOfCustomers(pageable);
+    List<CustomerDTO> customersPage(Pageable pageable) {
+        return customerService.getCustomerPage(pageable);
     }
 
     @GetMapping("/count")
