@@ -4,6 +4,7 @@ COPY pom.xml .
 RUN mvn dependency:go-offline
 COPY . .
 RUN mvn test
+RUN mvn package
 
 FROM openjdk:11
 COPY --from=buildJar /app/target/*.jar application.jar
