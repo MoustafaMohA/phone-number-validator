@@ -4,6 +4,7 @@ A small project to list some customers phone numbers and validate it, SQLite pra
 
 # How to run 
 - Clone repository.
+- Make sure you have docker and docker-compose installed
 - using terminal run in project root directory and run `docker-compose up --build`, this will create 2 docker images one for backend and other for frontend.
 - To stop both applications in the same project root directory where `docker-compose.yml` exist run `docker-compose down` this will kill application instances. 
 - Frontend is served using `nginx` server on port `80`.
